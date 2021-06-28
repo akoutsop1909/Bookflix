@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="Bookflix"  style="background: #e5eef4;">
+
+	<head>
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    	<script src="./libs/popper.min.js"></script>
+		<script src="./libs/bootstrap/js/bootstrap.min.js"></script>
+
+
+    	<script src="./libs/angularjs/angular.min.js"></script>
+    	<script src="./libs/angularjs/angular-resource.min.js"></script>
+    	<script src="./libs/angularjs/angular-route.min.js"></script>
+    	<script src="./libs/angularjs/angular-cookies.min.js"></script>
+
+		<!-- Controllers -->
+		<script src="./js/app.js"></script>
+		<script src="./js/bookListController.js"></script>
+		<script src="./js/bookDetailsController.js"></script>
+		<script src="./js/bookReaderController.js"></script>
+		<script src="./js/userController.js"></script>
+		<script src="./js/homeController.js"></script>
+		<script src="./js/profileController.js"></script>
+	
+		<link rel="icon" type="images/png" href="./images/BookIcon.png" />
+		
+		<meta charset="utf-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Bookflix</title>	
+
+		<!-- Bootstrap CSS  	-->	
+	    <link rel="stylesheet" type="text/css" href="./libs/bootstrap/css/bootstrap.min.css">	
+		<link rel="stylesheet" href="./libs/font-awesome/css/font-awesome.min.css" type="text/css"/>
+	    <link rel="stylesheet" type="text/css" href="./libs/animate.min.css">	
+
+	
+		<link rel="stylesheet" href="./css/layout.css" type="text/css"/>
+		<link rel="stylesheet" href="./css/login.css" type="text/css"/>
+		<link rel="stylesheet" href="./css/home.css" type="text/css"/>	
+		<link rel="stylesheet" href="./css/books.css" type="text/css"/>
+		<link rel="stylesheet" href="./css/book.css" type="text/css"/>
+		<link rel="stylesheet" href="./css/contactForm.css" type="text/css"/>
+		<link rel="stylesheet" href="./css/profile.css" type="text/css"/>
+	
+	</head>
+<!-- <frameset> -->
+<!-- <frame src="./views/home.html" name="home" scrolling="no"> -->
+<!-- </frameset> -->
+
+	<!-- <body  ng-controller="mainController" ng-class="bfbodyClass"> -->
+<body>
+	<div ng-app="Bookflix"  ng-controller="mainController" style="background: #e5eef4;">
+		<div ng-include src="'views/navbar.html'"></div>
+		<ng-view></ng-view>
+
+	  </div>
+
+	
+  	
+	
+	<!-- <div ng-view></div> -->
+   
+	</body>
+</html>

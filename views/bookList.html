@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  
+    <div ng-hide="!ref.loading" class="spin">
+        Loading... 
+        <i class="fa fa-spinner fa-spin fa-10x"></i>
+    </div>
+    <div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>{{item}}</h2>
+            </div>
+        </div>
+        <div class="row" justify-content-between>
+            <div ng-repeat="item in bookList.works">
+                <div class="col-xs-6 col-md-3 col-sm-3 small-padding right bottom">
+                    <div class="index-content">
+                        <div class="card">
+                            <div style="text-align: center;">
+                                <img src="http://covers.openlibrary.org/b/id/{{item.cover_id}}.jpg"
+                                    class="img-max"></img>
+                            </div>
+                            <div>
+                                <h4>{{item.title | limitTo: 22}}{{item.title.length > 22 ? '...' : ''}}</h4>
+                                <p class="card-text">{{item.authors[0].name}}</p>
+                                <a style="padding: 20px;" ng-href="#!/bookDetails/{{item.cover_edition_key}}">Show
+                                    details</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>

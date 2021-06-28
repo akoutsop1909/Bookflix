@@ -1,0 +1,163 @@
+<div class="container emp-details">
+    <form method="post">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="details-img">
+                    <img class="img-dimen mx-auto"
+                        src="http://covers.openlibrary.org/b/id/{{bookDetails.covers[0]}}.jpg" alt="slide" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="details-head">
+                    <h5>
+                        {{bookDetails.title}}
+                    </h5>
+                    <h6>
+                        {{bookDetails.by_statement}}
+                    </h6>
+                    <label>Author's bio</label>
+                    <br /><b>Name:</b> {{authorDetails.personal_name}}
+                    <br /><b>Date of birth:</b> {{authorDetails.birth_date}}
+                    <p>
+                        <button ng-if="user.username && !isBooking" type="button" class="btn btn-default" aria-label="book" 
+                        ng-if="user.username" ng-click="addBooking(bookDetails.key.substring(7), bookDetails.title, authorDetails.personal_name)">
+                            <span class="fa fa-book fa-lg" aria-hidden="true"></span> Book Now
+                        </button>
+                        <button ng-if="user.username && isBooking" type="button" class="btn btn-default" aria-label="book" 
+                        ng-if="user.username" ng-click="returnBooking(bookDetails.key.substring(7))">
+                            <span class="fa fa-undo fa-lg" aria-hidden="true"></span> Return Book
+                        </button>
+                        <a ng-if="user.username && isBooking" ng-href="#!/bookReader/{{bookDetails.key.substring(7)}}">Read Book</a>
+                    </p>
+
+                    <ul class="nav nav-details nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="details-tab" data-toggle="tab" href="#details" role="tab"
+                                aria-controls="details" aria-selected="true">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="other-tab" data-toggle="tab" href="#other" role="tab"
+                                aria-controls="other" aria-selected="false">Other</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <!--enable when login -->
+                <div class="btn-hov">
+                    <button ng-if="user.username" type="button" class="btn btn-primary rounded-btn">
+                        Suggest this
+                    </button>  
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="details-work">
+                    <p></p>
+                    <button ng-if="user.username && !isFavorite" type="button" name="btn-help" class="btn btn-link" title="Add to Favorites" ng-click="addFavorite(bookDetails.key.substring(7), bookDetails.title, authorDetails.personal_name)">
+                        <i class="fa fa-heart-o fa-2x"></i>
+                    </button>
+                    <button ng-if="user.username && isFavorite" type="button" name="btn-help" class="btn btn-link" title="Remove from Favorites" ng-click="removeFavorite(bookDetails.key.substring(7))">
+                        <i class="fa fa-heart fa-2x"></i>
+                    </button>
+                    <p class="color-blue" ng-if="bookDetails.series[0]">Series: {{bookDetails.series[0]}}</p>
+                    <p class="color-blue" ng-if="bookDetails.isbn_10[0]">ISBN 10: {{bookDetails.isbn_10[0]}}</p>
+                    <p class="color-blue" ng-if="bookDetails.isbn_13[0]">ISBN 13: {{bookDetails.isbn_13[0]}}</p>
+                    <p class="color-blue" ng-if="bookDetails.number_of_pages">Number of pages:
+                        {{bookDetails.number_of_pages}}</p>
+                    <p class="color-blue" ng-if="bookDetails.physical_format">Physical format:
+                        {{bookDetails.physical_format}}</p>
+                    <p class="color-blue" ng-if="bookDetails.publishers[0]">Publisher: {{bookDetails.publishers[0]}}</p>
+                    <p class="color-blue" ng-if="bookDetails.publish_places[0]">Publish place:
+                        {{bookDetails.publish_places[0]}}</p>
+                    <p class="color-blue" ng-if="bookDetails.publish_date">Publish date: {{bookDetails.publish_date}}
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="tab-content details-tab" id="myTabContent">
+                    <div class="tab-pane fade show active" id="details" role="tabpanel" aria-labelledby="details-tab">
+                        <div class="row">
+                            <div ng-if="bookDetails.notes.value" class="col-md-6">
+                                <label>Edition Notes</label>
+                                <br />{{bookDetails.notes.value}}
+                            </div>
+                            <div ng-if="!bookDetails.notes.value" class="col-md-6">
+                                <label>Edition Notes</label>
+                                <br />{{bookDetails.notes}}
+                            </div>
+                            <div ng-if="workDetails.description.value" class="col-md-6">
+                                <p>Description</p>
+                                {{workDetails.description.value}}
+                            </div>
+                            <div ng-if="!workDetails.description.value" class="col-md-6">
+                                <p>Description</p>
+                                {{workDetails.description}}
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane fade " id="other" role="tabpanel" aria-labelledby="other-tab">
+                        <div class="row">
+                            <div class="col-md-12">
+                                {{authorDetails.bio.value}}
+                            </div>
+                            <div class="col-md-12">
+                                <p ng-if="workDetails.links">Links</p>
+                                <a ng-repeat-start="item in workDetails.links" href="{{item.url}}" target="_blank">
+                                    {{item.title}}</a>
+                                <span ng-repeat-end></span>
+                                <br/>
+                            </div>
+                        </div> <br />
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>Subjects</p>
+                                <br />
+                                <span ng-repeat="item in workDetails.subjects">
+                                    <!-- <button type="button"  ng-style="{ background: getNumber(item) }" -->
+                                    <button type="button" class="btn btn-primary btn-sm rounded-btn" ng-disabled="true">
+                                        {{item}}
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">You must log in</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>In order to make suggestions, you should be logged in.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $('.nav-details a:first').tab('show');
+    $('.nav-details a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    });
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+
+
+</script>

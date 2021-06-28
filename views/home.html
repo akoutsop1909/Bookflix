@@ -1,0 +1,277 @@
+<!-- carousel -->
+<div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="mask flex-center">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-7 col-12 order-md-1 order-2">
+                            <h4>{{someWork[0].title}}</h4>
+                            <p>{{someWork[0].description.value | limitTo: 500}}...</p>
+                            <a ng-href="#!/bookDetails/{{someBook[0].key.substring(7)}}">BOOK NOW</a>
+                        </div>
+                        <div class="col-md-5 col-12 order-md-2 order-1">
+                            <img src="http://covers.openlibrary.org/b/id/{{someWork[0].covers[0]}}.jpg" class="mx-auto" alt="slide">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="mask flex-center">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-7 col-12 order-md-1 order-2">
+                            <h4>{{someWork[1].title}}</h4>
+                            <p>{{someWork[1].description.value | limitTo: 500}}...</p>
+                            <a ng-href="#!/bookDetails/{{someBook[1].key.substring(7)}}">BOOK NOW</a>
+                        </div>
+                        <div class="col-md-5 col-12 order-md-2 order-1">
+                            <img src="http://covers.openlibrary.org/b/id/{{someWork[1].covers[0]}}.jpg" class="mx-auto" alt="slide">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="mask flex-center">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-7 col-12 order-md-1 order-2">
+                            <h4>{{someWork[2].title}}</h4>
+                            <p>{{someWork[2].description.value | limitTo: 500}}...</p>
+                            <a ng-href="#!/bookDetails/{{someBook[2].key.substring(7)}}">BOOK NOW</a>
+                        </div>
+                        <div class="col-md-5 col-12 order-md-2 order-1">
+                            <img src="http://covers.openlibrary.org/b/id/{{someWork[2].covers[0]}}.jpg" class="mx-auto" alt="slide">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<!--carousel-->
+<hr />
+
+<br />
+
+<div class="container-fluid">
+    <h4 class="styleh">Popular Genres</h4>
+    <div class="row">
+        <div class="col-md-3 col-sm-4">
+            <div class="wrimagecard wrimagecard-topimage">
+                <a href="#!/bookList/fantasy">
+                    <div class="wrimagecard-topimage_header" style="background-color:rgba(187, 120, 36, 0.1) ">
+                        <center><i class="fa fa-magic " style="color:#BB7824"></i></center>
+                    </div>
+                    <div class="wrimagecard-topimage_title">
+                        <h4 class="h4hover">Fantasy
+                            <div class="pull-right badge"></div>
+                        </h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-4">
+            <div class="wrimagecard wrimagecard-topimage">
+                <a href="#!/bookList/romance">
+                    <div class="wrimagecard-topimage_header" style="background-color: rgba(22, 160, 133, 0.1)">
+                        <center><i class="fa fa-heartbeat" style="color:#16A085"></i></center>
+                    </div>
+                    <div class="wrimagecard-topimage_title">
+                        <h4 class="h4hover">Romance
+                            <div class="pull-right badge"></div>
+                        </h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-4">
+            <div class="wrimagecard wrimagecard-topimage">
+                <a href="#!/bookList/science_fiction">
+                    <div class="wrimagecard-topimage_header" style="background-color:  rgba(213, 15, 37, 0.1)">
+                        <center><i class="fa fa-flask" style="color:#d50f25"> </i></center>
+                    </div>
+                    <div class="wrimagecard-topimage_title">
+                        <h4 class="h4hover">Science Fiction
+                            <div class="pull-right badge"></div>
+                        </h4>
+                    </div>
+
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-4">
+            <div class="wrimagecard wrimagecard-topimage">
+                <a href="#!/bookList/thriller">
+                    <div class="wrimagecard-topimage_header" style="background-color:  rgba(51, 105, 232, 0.1)">
+                        <center><i class="fa fa-puzzle-piece" style="color:#3369e8"> </i></center>
+                    </div>
+                    <div class="wrimagecard-topimage_title">
+                        <h4 class="h4hover">Thriller
+                            <div class="pull-right badge"></div>
+                        </h4>
+                    </div>
+
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="card" style="background: #e5eef4;">
+    <h4 class="styleh">Best Seller </h4>
+    <div class="container">
+
+        <div id="carouselBookList" class="carousel slide" data-ride="carousel">
+
+            <ul class="carousel-indicators mb-0 pb-0">
+                <li data-target="#carouselBookList" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselBookList" data-slide-to="1"></li>
+                <li data-target="#carouselBookList" data-slide-to="2"></li>
+            </ul>
+
+            <div class="carousel-inner no-padding my-5">
+                <div class="carousel-item active">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-size">
+                        <div class="">
+                            <a ng-href="#!/bookDetails/{{bestBook[0].key.substring(7)}}" class="slider_info">
+                                <span class="float-left text-uppercase">{{bestWork[0].title}}</span>
+                                <span class="float-right text-uppercase" id="authors.name"> {{bestAuthor[0].name}}</span>
+                            </a>
+                        </div>
+                        <div style="text-align: center">
+                            <img class="img-fluid card-img-top" id="cover.medium" src="http://covers.openlibrary.org/b/id/{{bestWork[0].covers[0]}}.jpg">
+                        </div>
+                        <p class="block-with-text" id="excerpts.text">{{bestWork[0].description | limitTo: 165}}... </p>
+
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-size">
+                        <a ng-href="#!/bookDetails/{{bestBook[1].key.substring(7)}}" class="slider_info">
+                            <div class="">
+                                <span class="float-left text-uppercase">{{bestWork[1].title}}</span>
+                                <span class="float-right text-uppercase">{{bestAuthor[1].name}}</span>
+                            </div>
+                        </a>
+                        <div style="text-align: center">
+                            <img class="img-fluid card-img-top rounded-bottom" src="http://covers.openlibrary.org/b/id/{{bestWork[1].covers[0]}}.jpg">
+                        </div>
+
+                        <p class="block-with-text">{{bestWork[1].description | limitTo: 165}}...</p>
+
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-size">
+                        <a ng-href="#!/bookDetails/{{bestBook[2].key.substring(7)}}" class="slider_info">
+                            <div class="">
+                                <span class="float-left text-uppercase">{{bestWork[2].title}}</span>
+                                <span class="float-right text-uppercase">{{bestAuthor[2].name}}</span>
+                            </div>
+                        </a>
+                        <div style="text-align: center">
+                            <img class="img-fluid card-img-top rounded-bottom" src="http://covers.openlibrary.org/b/id/{{bestWork[2].covers[0]}}.jpg">
+                        </div>
+                        <p class="block-with-text">{{bestWork[2].description | limitTo: 165}}...</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-size">
+                        <a ng-href="#!/bookDetails/{{bestBook[3].key.substring(7)}}" class="slider_info">
+                            <div class="">
+                                <span class="float-left text-uppercase">{{bestWork[3].title}}</span>
+                                <span class="float-right text-uppercase">{{bestAuthor[3].name}}</span>
+                            </div>
+                        </a>
+                        <div style="text-align: center">
+                            <img class="img-fluid card-img-top" src="http://covers.openlibrary.org/b/id/{{bestWork[3].covers[0]}}.jpg">
+                        </div>
+                        <p class="block-with-text">{{bestWork[3].description | limitTo: 165}}...</p>
+
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-size">
+                        <a ng-href="#!/bookDetails/{{bestBook[4].key.substring(7)}}" class="slider_info">
+                            <div class="">
+                                <span class="float-left text-uppercase">{{bestWork[4].title}}</span>
+                                <span class="float-right text-uppercase">{{bestAuthor[4].name}}</span>
+                            </div>
+                        </a>
+                        <div style="text-align: center">
+                            <img class="img-fluid card-img-top" src="http://covers.openlibrary.org/b/id/{{bestWork[4].covers[0]}}.jpg">
+                       </div>
+                       <p class="block-with-text">{{bestWork[4].description | limitTo: 165}}...</p>
+
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-size">
+                        <a ng-href="#!/bookDetails/{{bestBook[5].key.substring(7)}}" class="slider_info">
+                            <div class="">
+                                <span class="float-left text-uppercase">{{bestWork[5].title}}</span>
+                                <span class="float-right text-uppercase">{{bestAuthor[5].name}}</span>
+                            </div>
+                        </a>
+                        <div style="text-align: center">
+                            <img class="img-fluid card-img-top" src="http://covers.openlibrary.org/b/id/{{bestWork[5].covers[0]}}.jpg">
+                        </div>
+                        <p class="block-with-text">{{bestWork[5].description | limitTo: 165}}...</p>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-size">
+                        <a ng-href="#!/bookDetails/{{bestBook[6].key.substring(7)}}" class="slider_info">
+                            <div class="">
+                                <span class="float-left text-uppercase">{{bestWork[6].title}}</span>
+                                <span class="float-right text-uppercase">{{bestAuthor[6].name}}</span>
+                            </div>
+                        </a>
+                        <div style="text-align: center">
+                            <img class="img-fluid card-img-top" src="http://covers.openlibrary.org/b/id/{{bestWork[6].covers[0]}}.jpg">
+                        </div>
+                        <p class="block-with-text">{{bestWork[6].description | limitTo: 165}}...</p>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-size">
+                        <a ng-href="#!/bookDetails/{{bestBook[7].key.substring(7)}}" class="slider_info">
+                            <div class="">
+                                <span class="float-left text-uppercase">{{bestWork[7].title}}</span>
+                                <span class="float-right text-uppercase">{{bestAuthor[7].name}}</span>
+                            </div>
+                        </a>
+                        <div style="text-align: center">
+                            <img class="img-fluid card-img-top" src="http://covers.openlibrary.org/b/id/{{bestWork[7].covers[0]}}.jpg">
+                        </div>
+                        <p class="block-with-text">{{bestWork[7].description | limitTo: 165}}...</p>
+
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-size">
+                        <a ng-href="#!/bookDetails/{{bestBook[8].key.substring(7)}}" class="slider_info">
+                            <div class="">
+                                <span class="float-left text-uppercase">{{bestWork[8].title}}</span>
+                                <span class="float-right text-uppercase">{{bestAuthor[8].name}}</span>
+                            </div>
+                        </a>
+                        <div style="text-align: center">
+                            <img class="img-fluid card-img-top" src="http://covers.openlibrary.org/b/id/{{bestWork[8].covers[0]}}.jpg">
+                        </div>
+                        <p class="block-with-text">{{bestWork[8].description | limitTo: 165}}...</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $('#myCarousel').carousel({
+        interval: 3000,
+    })
+</script>

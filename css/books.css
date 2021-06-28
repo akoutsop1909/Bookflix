@@ -1,0 +1,134 @@
+.img-dimen {
+    /* width: 100%;
+	max-height: 2500px; 
+	max-width: 250px; */
+} 
+.img-max{
+  max-width: 200px;
+  max-height: 300px;
+  min-height: 300px;
+}
+
+.index-content .card {
+    max-height: 450px;
+    min-height: 450px;
+    max-width: 450px;
+    width: 350px;
+    background-color: #FFFFFF;
+    padding: 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  }
+  .index-content .card img {
+    width: 100%;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+  .index-content .card h4 {
+    margin: 20px;
+  }
+  .index-content .card p {
+    margin: 20px;
+    opacity: 0.65;
+  }
+ 
+  /* Set width between block elements */
+  .small-padding.top {
+     padding-top:10px;
+  }
+
+  .small-padding.bottom {
+      padding-bottom:10px;
+  }
+  
+  .small-padding.left {
+      padding-left:5px;
+  }
+
+  .small-padding.right {
+      padding-right:5px;
+  }
+  
+  .margin_bottom {
+    margin-bottom: 10px;
+  }
+ 
+  .card-img-bottom {
+    color: #fff;
+    height: 20rem;
+    background: url(images/img1.jpg) center no-repeat;
+    background-size: cover;
+  }
+  
+  .img-responsive { 
+      height: 100%;
+  }
+  
+  @media (max-width: 768px) {
+      .img-responsive {
+          width: 100%;
+      }
+      .index-content .card img {
+          height: 100% }
+     
+      .index-content .card p {
+          padding: 0 20px 10px;
+          margin: 0;
+        }      
+  }
+
+  @media (max-width: 991px) {
+    h3 {
+      font-size: 1.2em;
+    }
+
+  }
+
+  /* GRID ELEMENTS MEDIA QUERIES */
+  @media (min-width: 768px) {
+    .card {
+      position: relative;
+    }
+    .card-content {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .card-content h4,
+    .card-content p {
+      color: white;
+      width: 100%;
+      float: left;
+      margin: 0 0 5px;
+    }
+    .card-content a {
+      float: right;
+    }
+    .index-content .card h4,
+    .index-content .card p {
+      padding: 15px 20px;
+      margin: 0;
+    }
+    .index-content .card p {
+      padding: 0 20px 10px;
+      margin: 0;
+    }
+    .card-content-textbox {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(255, 255, 255, 0.7);
+      margin: 15px;
+      max-width: 300px;
+      height: 91%
+    }
+  }
+  .spin{
+    font-size: 24px;
+    color: rgb(85, 85, 163);
+    text-align: center;
+    padding:10px
+  }

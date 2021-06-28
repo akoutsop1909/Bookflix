@@ -1,0 +1,31 @@
+<div class="bckImage">
+	<div class="container">
+		<div class="login-form col-md-4 col-sm-4 offset-md-4">
+			<img src="images/avatar.png" class="avatar" />
+			<h2 class="title">Bookflix </h2>
+			<form ng-controller="userController" ng-submit="signup()" method="POST" >
+				<p class="errMessage">{{errMessage}}</p>
+				<div class="form-group">
+					<label>Username</label>
+					<input type="text" name="username" class="form-control" ng-model="username" placeholder="Enter Username" />
+				</div>
+
+				<div class="form-group">
+					<label>Password</label>
+					<input type="password" name="password" class="form-control" ng-model="password" placeholder="Enter Password"  />
+				</div>
+				<div class="form-group">
+					<label>Email</label>
+					<input type="email" name="email" class="form-control" ng-model="email" placeholder="Enter Email" />
+				</div>
+
+				<input type="submit" value="Sign Up" class="btn btn-primary btn-block" id="register" >
+			</form>
+		</div>
+	</div>
+	<div class="justify-content-center" ng-hide="true">
+		<div class="version">
+			<small> Bookflix | v.0 0 1 </small>
+		</div>
+	</div>
+</div>
