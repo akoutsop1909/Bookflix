@@ -1,0 +1,47 @@
+<div class="bs-example">
+    <nav class="navbar navbar-expand-md navbar-light bg-light navbar-fixed-top">
+        <a href="#!/home" class="navbar-brand">BookFlix</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            <div class="navbar-nav" id="example-one">
+                <a id="home" class="nav-item nav-link current_page_item" href="#!/home">Home</a>
+                <a id="library" class="nav-item nav-link" href="#!/library">Library</a>
+                <a id="library" class="nav-item nav-link" href="#!/contactForm">Contact Us</a>
+                <a id="library" class="nav-item nav-link" href="#!/about">About</a>
+                
+            </div>
+				<ul class="nav navbar-nav navbar-right" id="example-one">
+				<li>
+					<a ng-if="user.username" href="#!/profile" style="color:white">
+                        {{user.username}}
+					</a>
+					<a ng-if="!user.username" href="#!/login" style="color:white">
+					  <i class="fa fa-sign-in"></i> 
+						Login
+                    </a> 
+                    <a ng-if="user.username" href="#!/logout" style="color:white">
+                        <i class="fa fa-sign-in"></i> 
+                          Logout
+                    </a> 
+                    <span ng-if="!user.username">/</span>
+					<a ng-if="!user.username" href="#!/signup" style="color:white">
+						Sign Up
+					</a> 
+				</li>
+			  </ul>
+        </div>
+    </nav>
+</div>
+
+<script>
+
+$('#example-one a').click(function(e) {
+    $('#example-one a').removeClass('current_page_item');
+    $(this).addClass('current_page_item');
+});
+
+</script>
+

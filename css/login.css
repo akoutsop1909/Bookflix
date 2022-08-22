@@ -1,0 +1,79 @@
+﻿.login-body {
+    color: #fff;
+    background-color: #6C94B7;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/*for te content space*/ 
+.overflow {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.bckImage{
+	background-image: url("../images/library4.jpg");	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.login-form {
+    background-color: #2D4A63;
+    border-radius: 8px;
+    opacity: 0.98;
+    padding: 60px 50px 50px 50px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.btn-login {
+    color: #fff;
+    background-color: #386FA4;
+    border-color: #386FA4;
+}
+
+.title {
+    background-color: #f80000;
+    border-radius: 3px;
+    font-family: Calibri;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+}
+
+
+.login-form input[type=text],
+.login-form input[type=password],
+.login-form input[type=email] {
+    border: none;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ffffff;
+    background-color: transparent;
+    outline: none;
+    height: 40px;
+    color: #ffffff;
+}
+
+.logo {
+    height: 50px;
+    width: 80%;
+}
+
+@media only screen and (max-width : 340px) {
+.versionSize {
+    font-size: 62%;
+}
+}
+
+.version {
+    margin-top: 19px;
+}
+.errMessage {
+    color: #ff4141;
+}

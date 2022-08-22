@@ -1,0 +1,122 @@
+<div class="container" style="background: #e5eef4;">
+    <h5 class="text">Welcome back {{user.username}}</h5>
+    <br />
+    <!-- <div class="row">
+        <ul class="list-group">
+            <li class="list-group-item disabled" style="color: rgb(24, 24, 124);">
+                <i class="fa fa-book"></i>Recent books
+            </li>
+            <li class="list-group-item">
+                title: title1e - athor:
+                <a ng-href="">Show details</a>
+            </li>
+            <li class="list-group-item">
+                title: title15 - athor:
+                <a ng-href="">Show details</a>
+            </li>
+            <li class="list-group-item">
+                title: title41 - athor:
+                <a ng-href="">Show details</a>
+            </li>
+            <li class="list-group-item">
+                title: title16 - athor:
+                <a ng-href="">Show details</a>
+            </li>
+        </ul>
+    </div> -->
+<h4> Borrowed Books</h4>
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-image">
+                <thead>
+                <tr style="color: #323967;text-align: center">
+                        <th scope="col">Book ID</th>
+                        <th scope="col">Cover</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Author</th>
+                        <th scope="col">
+                            <i class="fa fa-heart"></i>
+                        </th>
+                        <th scope="col" >
+                            <i class="fa fa-book"> </i>
+                        </th>
+                        <th scope="col">
+                            <i class="fa fa-undo"></i>
+                        </th>
+                        <th scope="col">Return Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in userData.bookings" style="text-align: center">
+                        <th scope="row">{{item.book.bookID}}</th>
+                        <td class="w-25">
+                            <img src="http://covers.openlibrary.org/b/olid/{{item.book.bookID}}-S.jpg"
+                                class="img-fluid img-thumbnail" alt="image cover">
+                        </td>
+                        <td>
+                            <a ng-href="#!/bookDetails/{{item.book.bookID}}">{{item.book.title}}</a>
+                        </td>
+                        <td>{{item.book.author}}</td>
+                        <td>
+                            <button ng-if="!isFavorited(item.book.bookID)" type="button" class="btn btn-link" ng-click="addFavorite(item.book)">
+                                <i class="fa fa-heart-o"></i>
+                            </button>
+                            <button ng-if="isFavorited(item.book.bookID)" type="button" class="btn btn-link" ng-click="removeFavorite(item.book.bookID)">
+                                <i class="fa fa-heart"></i>
+                            </button>
+                        </td>
+                        <td>
+                            <a ng-href="#!/bookReader/{{item.book.bookID}}">Read Book</a>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm" ng-click="returnBooking(item.book.bookID)">Return Book</button>
+                        </td>
+                        <td>{{item.returnDate}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <hr/>
+    <h4>Favorite Books</h4>
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-image">
+                <thead>
+                    <tr style="color: #323967;text-align: center">
+                        <th scope="col">Book ID</th>
+                        <th scope="col">Cover</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Author</th>
+                        <th scope="col">
+                            <i class="fa fa-book"> </i>
+                        </th>
+                        <th scope="col">
+                            <i class="fa fa-undo"></i>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in userData.favorites" style="text-align: center">
+                        <th scope="row">{{item.bookID}}</th>
+                        <td class="w-25">
+                            <img src="http://covers.openlibrary.org/b/olid/{{item.bookID}}-S.jpg"
+                                class="img-fluid img-thumbnail" alt="image cover">
+                        </td>
+                        <td>
+                            <a ng-href="#!/bookDetails/{{item.bookID}}">{{item.title}}</a>
+                        </td>
+                        <td>{{item.author}}</td>
+                        <td>
+                            <button ng-if="!isBooked(item.bookID)" type="button" class="btn btn-primary btn-sm" ng-click="addBooking(item.bookID, item.title, item.author)">Book Now</button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm" ng-click="removeFavorite(item.bookID)">Remove from Favorites</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

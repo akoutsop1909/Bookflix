@@ -1,0 +1,27 @@
+nav{
+	background: linear-gradient(40deg,#ff5656,#73a1f5)!important;
+}
+.navbar{
+	padding:1rem
+	}
+.navbar-toggler{float:left;}
+
+/* @media(max-width:61.9em) { */
+
+@media(max-width: 1024px) {
+	.nav-content{
+		display:none;
+	}
+  .navbar .navbar-brand {
+	  float:none;
+	  display:inline-block;
+  }
+  .navbar .navbar-nav>.nav-item { float: none; margin-left: .1rem;}
+  .navbar .navbar-nav {float:none !important;}
+  .nav-item{width:100%;text-align:left;} 
+}
+
+.current_page_item {
+color: rgba(36, 65, 162, 0.5);
+font-weight: bold;
+}
