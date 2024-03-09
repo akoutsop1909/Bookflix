@@ -1,17 +1,17 @@
 # Bookflix
-Ομαδική εργασία στα πλαίσια του μαθήματος "Μηχανική Λογισμικού για Διαδικτυακές Εφαρμογές" του ΠΜΣ "Ευφυείς Τεχνολογίες Διαδικτύου", στην οποία ασχολήθηκα με το κομμάτι της JavaScript (AngularJS).
+Group project in the context of the course "Software Engineering for Web Applications" of the Postgraduate Program "Web Intelligence", in which I worked with JavaScript (AngularJS).
 
-Πρόκειται για μια διαδικτυακή βιβλιοθήκη, μέσω της οποίας ένας συνδεδεμένος χρήστης δανείζεται, διαβάζει, επιστρέφει ή/και προσθαφαιρεί αγαπημένα βιβλία. Η σελίδα με τις λεπτομέρειες του βιβλίου προσφέρει όλες τις προαναφερθείσες λειτουργίες, ενώ το προφίλ του χρήστη μερικές εξ' αυτών. Για έναν μη-εξοικειωμένο χρήστη, η αρχική σελίδα προτείνει βιβλία μέσω του καρουζέλ, δημοφιλών κατηγοριών (Fantasy, Romance, Science Fiction, Thriller) και best sellers. Εναλλακτικά, πλοηγείται στα διαθέσιμα βιβλία από την καρτέλα "Library", όπου πρώτα επιλέγει μία κατηγορία και στη συνέχεια "Show details" εκείνου που τον ενδιαφέρει. Απο εκεί, πληροφορείται για τις λεπτομέρειές του (συγγραφέας, σημειώσεις έκδοσης, περιγραφή και άλλα) και αποφασίζει αν θα το δανειστεί ή/και προσθέσει στα αγαπημένα. Μια απλή εξερεύνηση στον κατάλογο με τα βιβλία δεν απαιτεί τη δημιουργία λογαριασμού.
+It is an online library through which a logged-in user borrows, reads, returns and/or adds/removes favorite books. The "show details" page offers all the above features, while the user profile offers some of them. For a new user, the home page suggests books through the carousel, popular genres (Fantasy, Romance, Science Fiction, Thriller), and best sellers. Alternatively, they navigate to the available books from the "library" tab, where they first select a category, and then "show details" of the one that interests them. This page informs them about the selected book's details (author, edition notes, description, etc.). To borrow the book, they click on "book now". To add it to their favorites, they click on the heart icon. A simple exploration of the book catalog does not require creating an account.
 
-⚠️ Η εφαρμογή είναι προσβάσιμη για δοκιμή από τον σύνδεσμο στο about του repository. Δυστυχώς, επειδή το project πλέον φιλοξενείται στο github.io, δε λειτουργεί το login/sign up. Το υπόλοιπο σάιτ, όμως, λειτουργεί κανονικά. ⚠️
+⚠️ The application is accessible for testing from the link in the "about" section of the repository. Unfortunately, since the project is now hosted on github.io, the login/sign up system does not work. The rest of the site functions normally. ⚠️
 
-* Καλεί τα API "Books", "Covers", "Subjects" και "Works" του Open Library (https://openlibrary.org/developers/api)
-* Δεν υλοποιεί το "Suggest this", αξιολόγηση βιβλίου, φόρμα επικοινωνίας και μπάρα αναζήτησης
-* Η ομαδα σχεδίασε το layout με bootstrap
-* Περισσότερα στο documentation
+* Calls the APIs "Books", "Covers", "Subjects", and "Works" of Open Library (https://openlibrary.org/developers/api)
+* It does not implement "suggest this", book rating, contact form, and search bar.
+* The team designed the layout with bootstrap.
+* More information in the documentation (in Greek).
 
-## Σχεδιάγραμμα Βάσης Δεδομένων
-![Εικόνα1](https://user-images.githubusercontent.com/51194516/185928000-8898f0d9-1675-4195-b151-101a7f2688e3.png)
+## Database Schema
+![Screenshot_1](https://github.com/akoutsop1909/Bookflix/assets/51194516/0dfe8b6c-a11f-4c16-8e3e-2774f5efc1c1)
 
-## Αρχιτεκτονική Συστήματος
+## System Architecture
 ![Screenshot_1](https://user-images.githubusercontent.com/51194516/185928402-959f68e3-8a3d-4738-9934-4d26b9cd841f.png)
