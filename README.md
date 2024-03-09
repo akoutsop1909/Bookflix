@@ -5,13 +5,13 @@ It is an online library through which a logged-in user borrows, reads, returns a
 
 ⚠️ The application is accessible for testing from the link in the "about" section of the repository. Unfortunately, since the project is now hosted on github.io, the login/sign up system does not work. The rest of the site functions normally. ⚠️
 
-* Calls the APIs "Books", "Covers", "Subjects", and "Works" of Open Library (https://openlibrary.org/developers/api)
+* Calls the APIs "Books", "Covers", "Subjects", and "Works" of Open Library (https://openlibrary.org/developers/api).
 * It does not implement "suggest this", book rating, contact form, and search bar.
 * The team designed the layout with bootstrap.
 * More information in the documentation (in Greek).
 
 ## Database Schema
-![Screenshot_1](https://github.com/akoutsop1909/Bookflix/assets/51194516/0dfe8b6c-a11f-4c16-8e3e-2774f5efc1c1)
+![Screenshot_2](https://github.com/akoutsop1909/Bookflix/assets/51194516/73840912-e167-42f9-873a-26b0492e7e09)
 
 ## System Architecture
-![Screenshot_1](https://user-images.githubusercontent.com/51194516/185928402-959f68e3-8a3d-4738-9934-4d26b9cd841f.png)
+![Screenshot_3](https://github.com/akoutsop1909/Bookflix/assets/51194516/7acbc319-86c2-4bde-ad2d-a9398d4446aa)
