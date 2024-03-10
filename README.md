@@ -11,7 +11,7 @@ It is an online library through which a logged-in user borrows, reads, returns a
 * More information in the documentation (in Greek).
 
 ## Database Schema
-![Screenshot_2](https://github.com/akoutsop1909/Bookflix/assets/51194516/73840912-e167-42f9-873a-26b0492e7e09)
+![Screenshot_1](https://github.com/akoutsop1909/Bookflix/assets/51194516/be1a6560-f0cf-4aaa-9508-676e96479766)
 
 ## System Architecture
 ![Screenshot_3](https://github.com/akoutsop1909/Bookflix/assets/51194516/7acbc319-86c2-4bde-ad2d-a9398d4446aa)
