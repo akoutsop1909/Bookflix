@@ -3,7 +3,8 @@ Group project in the context of the course "Software Engineering for Web Applica
 
 It is an online library through which a logged-in user borrows, reads, returns and/or adds/removes favorite books. The "show details" page offers all the above features, while the user profile offers some of them. For a new user, the home page suggests books through the carousel, popular genres (Fantasy, Romance, Science Fiction, Thriller), and best sellers. Alternatively, they navigate to the available books from the "library" tab, where they first select a category, and then "show details" of the one that interests them. This page informs them about the selected book's details (author, edition notes, description, etc.). To borrow the book, they click on "book now". To add it to their favorites, they click on the heart icon. A simple exploration of the book catalog does not require creating an account.
 
-⚠️ The application is accessible for testing from the link in the "about" section of the repository. Unfortunately, since the project is now hosted on github.io, the login/sign up system does not work. The rest of the site functions normally. ⚠️
+> [!IMPORTANT]
+> The application is accessible for testing from the link in the "about" section of the repository. Unfortunately, since the project is now hosted on github.io, the login/sign up system does not work. The rest of the site functions normally.
 
 * Calls the APIs "Books", "Covers", "Subjects", and "Works" of Open Library (https://openlibrary.org/developers/api).
 * It does not implement "suggest this", book rating, contact form, and search bar.
